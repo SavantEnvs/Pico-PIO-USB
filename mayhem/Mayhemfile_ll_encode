@@ -1,0 +1,9 @@
+project: savantenvs/Pico-PIO-USB
+target: ll_encode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ll_encode/testsuite
+cmds:
+  - cmd: /mayhem/ll_encode
+    libfuzzer: true
+    timeout: 10

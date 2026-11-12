@@ -1,0 +1,9 @@
+project: savantenvs/Pico-PIO-USB
+target: crc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/crc/testsuite
+cmds:
+  - cmd: /mayhem/crc
+    libfuzzer: true
+    timeout: 10
